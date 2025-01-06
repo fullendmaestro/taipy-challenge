@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "version": "1.0",
+  "name": "Taipy Assistant",
+  "action": {
+    "default_title": "Click to open panel"
+  },
+  "commands": {
+    "open taipy": {
+      "suggested_key": {
+        "default": "Alt+T"
+      },
+      "description": "Open Assistant"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "permissions": ["sidePanel"],
+  "icons": {
+    "16": "icons/logo.png",
+    "48": "icons/logo.png",
+    "128": "icons/logo.png"
+  }
+}
