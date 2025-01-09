@@ -20,10 +20,25 @@
         padding: 20px;
         text-align: center;
         font-family: system-ui, -apple-system, sans-serif;
+        color: #ff462b;
+      }
+      #connection-status {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 8px;
+        background-color: #ff462b;
+        color: white;
+        text-align: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        display: none;
       }
     </style>
   </head>
   <body>
+    <script src="sidepanel.js"></script>
+    <div id="connection-status">Connecting to server...</div>
     <iframe src="http://127.0.0.1:5000" allow="microphone"></iframe>
   </body>
 </html>
