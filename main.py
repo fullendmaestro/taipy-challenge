@@ -111,25 +111,16 @@ def reset_chat(state):
 
 # TODO #8: Design the GUI layout
 with tgb.Page() as page:
-    with tgb.layout(columns="350px 1"):
-        with tgb.part(class_name="sidebar"):
-            tgb.text("## Taipy Assistant", mode="md")
-            tgb.button(
-                "New Conversation",
-                class_name="fullwidth plain",
-                on_action=reset_chat,
+    with tgb.part(class_name="flex-column"):
+        tgb.part(partial="{conv}", height="90vh", class_name="card card_chat")
+        with tgb.part("card mt1 p0"):
+            tgb.input(
+                "{query_message}",
+                on_action=send_message,
+                change_delay=-1,
+                label="Write your message:",
+                class_name="fullwidth",
             )
-
-        with tgb.part(class_name="p1"):
-            tgb.part(partial="{conv}", height="600px", class_name="card card_chat")
-            with tgb.part("card mt1"):
-                tgb.input(
-                    "{query_message}",
-                    on_action=send_message,
-                    change_delay=-1,
-                    label="Write your message:",
-                    class_name="fullwidth",
-                )
 
 # TODO #9: Add the application run logic
 if __name__ == "__main__":
