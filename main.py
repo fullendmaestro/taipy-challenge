@@ -1,4 +1,3 @@
-# TODO #1: Import necessary libraries
 import os
 import pandas as pd
 import taipy.gui.builder as tgb
@@ -9,7 +8,7 @@ from taipy.gui import Gui, notify
 
 from tools.tab import list_tabs, open_tab, close_tab, switch_tab, get_tab_content
 
-# TODO #2: Load environment variables
+# Load environment variables
 load_dotenv()
 
 # Define the tools
@@ -41,7 +40,7 @@ tools = [
     )
 ]
 
-# TODO #4: Configure the LLM and agent
+# Configure the LLM and agent
 llm = ChatGoogleGenerativeAI(
     model="gemini-1.5-flash",
     temperature=0.4,
@@ -52,12 +51,12 @@ llm = ChatGoogleGenerativeAI(
 
 agent = initialize_agent(tools, llm, agent_type="zero-shot-react-description")
 
-# TODO #5: Define the function to query the LLM
+# Define the function to query the LLM
 def query_llm(query_message):
     response = agent.run(query_message)
     return response
 
-# TODO #6: Initialize chatbot state variables
+# Initialize chatbot state variables
 query_message = ""
 messages = []
 messages_dict = {}
@@ -72,7 +71,7 @@ def on_init(state):
     new_conv = create_conv(state)
     state.conv.update_content(state, new_conv)
 
-# TODO #7: Define helper functions for the chatbot
+# Define helper functions for the chatbot
 def create_conv(state):
     messages_dict = {}
     with tgb.Page() as conversation:
@@ -109,7 +108,7 @@ def reset_chat(state):
     state.query_message = ""
     on_init(state)
 
-# TODO #8: Design the GUI layout
+# Design the GUI layout
 with tgb.Page() as page:
     with tgb.part(class_name="flex-column"):
         tgb.part(partial="{conv}", height="90vh", class_name="card card_chat")
@@ -122,7 +121,7 @@ with tgb.Page() as page:
                 class_name="fullwidth",
             )
 
-# TODO #9: Add the application run logic
+# Add the application run logic
 if __name__ == "__main__":
     gui = Gui(page)
     conv = gui.add_partial("")
