@@ -1,21 +1,5 @@
 import asyncio
-import websockets
-import json
-
-WEBSOCKET_URI = "ws://localhost:8765"
-
-async def send_websocket_message(action, params=None):
-    async with websockets.connect(WEBSOCKET_URI) as websocket:
-        # Identify as Taipy client
-        await websocket.send(json.dumps({"client_type": "taipy"}))
-
-        message = {
-            "action": action,
-            "params": params or {}
-        }
-        await websocket.send(json.dumps(message))
-        response = await websocket.recv()
-        return json.loads(response)
+from .websocket_client import send_websocket_message
 
 def list_tabs():
     response = asyncio.run(send_websocket_message("list_tabs"))
