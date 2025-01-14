@@ -1,6 +1,6 @@
 # Taipy Assistant
 
-[Browser Assistant Demo](https://github.com/fullendmaestro/taipy-challenge/blob/main/docs/taipy.webp)
+![Taipy Assistant Demo](https://github.com/fullendmaestro/taipy-challenge/blob/main/docs/taipy.webp)
 Taipy Assistant is an innovative concept for an AI-powered browser extension that aims to seamlessly integrate with your web browsing experience. Leveraging the power of Google's Gemini 1.5 Flash model and the flexibility of Taipy's GUI framework, this assistant proposes an advanced level of interaction with your browser.
 
 ## 🚧 Project Status: Concept and Early Development
@@ -101,3 +101,14 @@ python websocket_server.py
 - Click "Load unpacked" and select the `extension` directory from the cloned repository
 
 7. Interact with the Taipy Assistant through the browser extension interface.
+
+## 🛠 Tech Stack
+
+- **Programming Language**: Python
+- **AI Model**: Google's Gemini 1.5 Flash
+- **Web Framework**: Taipy
+- **Communication Protocol**: WebSocket
+- **Browser Extension**: JavaScript, HTML, CSS
+- **Environment Management**: Virtualenv
+- **Version Control**: Git
+- **Package Management**: pip
