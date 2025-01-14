@@ -1,6 +1,6 @@
 # Taipy Assistant
 
-[Browser Assistant Demo](https://github.com/fullendmaestro/taipy-challenge/blob/main/docs/taipy.gif)
+[Browser Assistant Demo](https://github.com/fullendmaestro/taipy-challenge/blob/main/docs/taipy.webp)
 Taipy Assistant is an innovative concept for an AI-powered browser extension that aims to seamlessly integrate with your web browsing experience. Leveraging the power of Google's Gemini 1.5 Flash model and the flexibility of Taipy's GUI framework, this assistant proposes an advanced level of interaction with your browser.
 
 ## 🚧 Project Status: Concept and Early Development
