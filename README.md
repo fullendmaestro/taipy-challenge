@@ -106,6 +106,7 @@ python websocket_server.py
 
 - **Programming Language**: Python
 - **AI Model**: Google's Gemini 1.5 Flash
+- **Agent Execution**: LangsChain
 - **Web Framework**: Taipy
 - **Communication Protocol**: WebSocket
 - **Browser Extension**: JavaScript, HTML, CSS
