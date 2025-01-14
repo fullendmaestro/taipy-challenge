@@ -100,7 +100,7 @@ python websocket_server.py
 - Enable "Developer mode" using the toggle switch in the top right corner
 - Click "Load unpacked" and select the `extension` directory from the cloned repository
 
-7. Interact with the Taipy Assistant through the browser extension interface.
+7. Interact with the Taipy Assistant through the browser extension interface by clicking Or press `Alt+T`.
 
 ## 🛠 Tech Stack
 
