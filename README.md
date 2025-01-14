@@ -1,68 +1,103 @@
-# Taipy Assistant - AI-Powered Browser Control
-
-A powerful Chrome extension that lets you control your browser through natural language conversations using AI. Built with Python, Taipy, and the Chrome Extensions API.
+# Taipy Assistant
 
 ![Browser Assistant Demo](docs/demo.gif)
+Taipy Assistant is an innovative concept for an AI-powered browser extension that aims to seamlessly integrate with your web browsing experience. Leveraging the power of Google's Gemini 1.5 Flash model and the flexibility of Taipy's GUI framework, this assistant proposes an advanced level of interaction with your browser.
 
-## 🌟 Key Features
+## 🚧 Project Status: Concept and Early Development
 
-### 1. Natural Language Browser Control
+**Important Note**: Many features described in this README are conceptual or in very early stages of development. The project currently serves as a proof-of-concept and a framework for future implementation.
 
-- Control your browser by simply chatting with the AI assistant
-- The AI understands context and can perform complex sequences of actions
-- Powered by Google's Gemini 1.5 Flash model for fast and accurate responses
+## 🌟 Proposed Key Features
 
-### 2. Tab Management
+### 1. AI-Powered Browser Control (Partially Implemented)
 
-- **List Tabs**: View all open tabs across windows
-- **Open Tabs**: Open new tabs with specified URLs
-- **Close Tabs**: Close specific tabs by ID or URL
-- **Switch Tabs**: Navigate between tabs seamlessly
-- **Get Content**: Extract and analyze content from the current tab
+- Utilizes Google's Gemini 1.5 Flash model for advanced natural language understanding
+- Aims to execute complex browser actions through simple conversational commands
 
-## 🛠️ Technical Architecture
+### 2. Comprehensive Browser Integration (Mostly Conceptual)
 
-### Real-time Communication
+- **Tab Management**: Open, close, switch, and list tabs (Basic implementation)
+- **Bookmark Operations**: Add, delete, and list bookmarks (Not yet implemented)
+- **History Management**: Search and manage browsing history (Not yet implemented)
+- **Download Control**: Initiate and monitor downloads (Not yet implemented)
+- **Window Management**: Create new windows, including incognito mode (Not yet implemented)
+- **Clipboard Integration**: Copy and paste with voice commands (Not yet implemented)
+- **Browser Settings**: Adjust zoom levels and other settings (Not yet implemented)
 
-- WebSocket-based bidirectional communication between Taipy server and Chrome extension
-- Websocket client Identification for the Taipy server and the Extension
+### 3. Real-time Communication (Basic Implementation)
 
-### AI Integration
+- WebSocket server enables communication between the AI and the browser extension
+- Asynchronous operations for responsive user experience
 
-- Leverages Langchain for flexible tool integration
-- Uses Google's Gemini model for natural language understanding
-- Context-aware command processing
+### 4. User-Friendly Interface (Partially Implemented)
 
-### User Interface
+- Taipy-powered GUI for interaction (Basic implementation)
+- Markdown support for rich text responses (Implemented)
 
-- Clean and responsive chat interface built with Taipy
-- Real-time status updates and error handling
-- Seamless integration with Chrome's side panel
+## 🚀 Innovation
 
-## 🔧 Code Quality
+- **AI-Browser Synergy**: Unique concept of integrating AI capabilities with browser APIs
+- **Natural Language Browser Control**: Pioneering idea of using conversational AI for browser manipulation
+- **Extensible Architecture**: Framework designed for easy addition of new browser functionalities
 
-### Clean Architecture
+## 💻 Current Code Base
 
-- **Modular Design**: Separate controllers for different functionalities
-- **SOLID Principles**: Each component has a single responsibility
-- **Error Handling**: Comprehensive error handling at all levels
+- **Modular Design**: Initial structure with separation between AI, WebSocket server, and browser extension
+- **Asynchronous Programming**: Utilizes Python's `asyncio` for WebSocket communication
+- **Best Practices**: Aims to follow extension development guidelines and Python coding standards
 
-### Best Practices
+### Interaction Flow
 
-- Type hints for better code maintainability
-- Comprehensive documentation and comments
-- Consistent code style and formatting
-- Proper resource cleanup and memory management
+1. **User Input**: The user provides a natural language command.
+2. **AI Processing**: The AI component interprets the command and determines the appropriate action.
+3. **WebSocket Communication**: The AI component sends the action to the WebSocket server using asynchronous communication.
+4. **Command Execution**: The WebSocket server forwards the action to the browser extension.
+5. **Browser Manipulation**: The browser extension performs the action, such as opening a new tab or navigating to a URL.
 
-## 📝 Example Usage
+## 🛠 Setup and Installation (For Development Purposes)
 
-Here are some things you can ask the assistant to do:
+1. Clone the repository:
 
-```plaintext
-"Open https://github.com/ in a new tab"
-"Show me all my bookmarks about programming"
-"What's the content of the current tab?"
-"Download this PDF file"
-"Clear my browsing history for the last hour"
-"Search my history for machine learning articles"
+```bash
+git clone https://github.com/yourusername/taipy-assistant.git
+cd taipy-assistant
 ```
+
+2. Set up a virtual environment and activate it:
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+```
+
+3. Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Start the WebSocket server:
+
+```bash
+taipy run main.py --use-reloader
+```
+
+5. Start the taipy server:
+
+```bash
+python websocket_server.py
+```
+
+5. Start the WebSocket server:
+
+```bash
+python websocket_server.py
+```
+
+6. Load the browser extension:
+
+- Open Chrome and navigate to `chrome://extensions/`
+- Enable "Developer mode" using the toggle switch in the top right corner
+- Click "Load unpacked" and select the `extension` directory from the cloned repository
+
+7. Interact with the Taipy Assistant through the browser extension interface.
